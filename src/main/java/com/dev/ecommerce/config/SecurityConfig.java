@@ -8,7 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import static org.springframework.aot.generate.ValueCodeGenerator.withDefaults;
+import static org.springframework.security.config.Customizer.withDefaults;
 
 
 @Configuration
@@ -32,6 +32,5 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
-
 
 }
